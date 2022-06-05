@@ -8,7 +8,7 @@ export default function App() {
 
   const handleAddTask = () => {
     setTaskItems([...taskItems, task]);
-    setTask(null);
+    setTask('');
   }
 
   const completeTask = (index) => {
