@@ -4,10 +4,13 @@ import Task from './components/Task';
 
 export default function App() {
   const [task, setTask] = useState();
+  const [taskItems, setTaskItems] = useState([]);
 
   const handleAddTask = () => {
-    console.log(task);
+    setTaskItems([...taskItems, task]);
+    setTask(null);
   }
+  
   return (
     <View style={styles.container}>
 
@@ -15,6 +18,11 @@ export default function App() {
       <View style={styles.tasksWrapper}>
         <Text style={styles.sectionTitle}>Today's Tasks</Text>
         <View style={styles.items}>
+          {
+            taskItems.map((item, index) => {
+              return <Task key={index} text={item}/>
+            })
+          }
         <Task text={'Task 1'}/>
         <Task text={'Task 2'}/>
         </View>
