@@ -22,7 +22,10 @@ const styles = StyleSheet.create({
     flex: 1,
     backgroundColor: '#E8EAED',
   },
-  tasksWrapper: {},
   sectionTitle: {},
+  tasksWrapper: {
+    paddingTop: 80,
+    paddingHorizontal: 20,
+  },
   items: {},
 });
