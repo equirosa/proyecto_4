@@ -7,8 +7,12 @@ export default function App() {
   const [taskItems, setTaskItems] = useState([]);
 
   const handleAddTask = () => {
-    setTaskItems([...taskItems, task]);
-    setTask('');
+    if (task != '') {
+      setTaskItems([...taskItems, task]);
+      setTask('');  
+    } else {
+      console.log('Error: new task must not be an empty string') 
+    }
   }
 
   const completeTask = (index) => {
