@@ -13,7 +13,7 @@
           nativeBuildInputs = [ pkgs.bashInteractive ];
           buildInputs = with pkgs; [
             nodejs
-            python3Full
+            python310Full
             python310Packages.pip
             python310Packages.selenium
             pyright
