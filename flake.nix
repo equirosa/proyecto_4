@@ -11,7 +11,7 @@
       {
         devShell = pkgs.mkShell {
           nativeBuildInputs = [ pkgs.bashInteractive ];
-          buildInputs = with pkgs; [ nodejs ];
+          buildInputs = with pkgs; [ nodejs python3Full python310Packages.pip ];
         };
       });
 }
